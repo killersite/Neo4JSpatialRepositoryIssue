@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.springframework.org/schema/data/neo4j"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/data/neo4j http://www.springframework.org/schema/data/neo4j/spring-neo4j-2.0.xsd">
+
+    <!--If we're not bothered about the management console we can just use this -->
+    <config storeDirectory="/tmp/db-neo4j" entityManagerFactory="entityManagerFactory"/>
+	<repositories base-package="com.ex.neorepository"/>
+
+</beans:beans>
